@@ -9,7 +9,7 @@
     
     @media (max-width: 580px) {
         width: 100%;
-        height: 20%;
+        height: 40%;
         /* background: #138b69; */
         margin: auto auto 100px auto;
     }
@@ -18,17 +18,24 @@
         width: 50%;
         height: 100%;
         /* background: hotpink; */
-        /* position: relative; importante */
         position: absolute;/*importante*/
         left: calc(50% - 25%);
         display: flex;
 
         & img {
-            height: 130%;
+            /* height: 130%; */
+            width: 55%;
             top: -15%;
-            left: 25%;
+            left: 22%;
             position: absolute;
             /* background: red; */
+            margin: auto;
+
+            @media (max-width: 1050px) {
+                & {
+                    top: 1px;
+                }
+            }
         }
     }
 
@@ -59,6 +66,12 @@
             padding: auto 0px;
             /* display: flex; */
             justify-content: center;
+
+            @media (max-width: 1050px) {
+                & {
+                    width: 20%;
+                }
+            }
         }
         
         .line_leter {
@@ -98,8 +111,103 @@
             align-items: center;
 
             & p {
-                font-size: 20px;
+                font-size: 40px;
             }
+        }
+    }
+}
+
+@keyframes animated_01 {
+    0% {
+        justify-content: right;
+    }
+    50% {
+        justify-content: left;
+    }
+    100% {
+        justify-content: right;
+    }
+}
+
+@keyframes animated_02 {
+    0% {
+        opacity: 0;
+        /* transform: rotate(0deg); */
+    }
+    100% {
+        opacity: 1;
+        /* transform: rotate(180deg); */
+    }
+}
+
+.molecule_BoxAnimateLA {
+    background: none;
+    color: black;
+    width: 200%;
+    height: 200%;
+    display:flex;
+    flex-direction:column;
+    
+    & .item_x:nth-child(1) {
+        animation-delay: 0.1s; /* El primer .item_x comienza la animación después de 1 segundo */
+    }
+    & .item_x:nth-child(2) {
+        animation-delay: 0.2s; /* El segundo .item_x comienza la animación después de 2 segundos */
+    }
+    & .item_x:nth-child(3) {
+        animation-delay: 0.3s; /* El tercer .item_x comienza la animación después de 3 segundos */
+    }
+    & .item_x:nth-child(4) {
+        animation-delay: 0.4s; /* El cuarto span comienza la animación después de 4 segundos */
+    }
+    & .item_x:nth-child(5) {
+        animation-delay: 0.5s; /* El cuarto span comienza la animación después de 4 segundos */
+    }
+    & .item_x:nth-child(6) {
+        animation-delay: 0.6s; /* El cuarto span comienza la animación después de 4 segundos */
+    }
+    
+    .item_x {
+        display:flex;
+        margin:auto;
+        height: 20px;
+        width: 100%;
+        justify-content: right;
+        animation-name: animated_01;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+    }
+    .item_y {
+        width: calc(100% / 6);
+        margin: 1px;
+        display: flex;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+        animation-name: animated_02;
+
+        & img {
+            width: 60%; margin:auto
+        }
+
+        &:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        &:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        &:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+        &:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+        &:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+        &:nth-child(6) {
+            animation-delay: 0.6s;
         }
     }
 }
