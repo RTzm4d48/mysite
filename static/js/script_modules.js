@@ -1,33 +1,30 @@
 import { screen_modules_size_X } from '/static/js/utils/helpers.js';
 
 class MyModules {
-    constructor() {
-    this.modules = {};
-    this.html_contMoules = document.getElementById('contMoules');
-    // this.write_allModules(21, 90, 10);
-    
+    constructor(numModules=21, sizeLimiter=90, nodules_Y=10) {
+        this.numModules = numModules;
+        this.sizeLimiter = sizeLimiter;
+        this.nodules_Y = nodules_Y;
+        this.width = screen_modules_size_X(this.numModules, this.sizeLimiter);
+        
+        this.write_allModules();
+        this.responsive_properties();
     }
-    write_allModules(numModules=21, sizeLimiter=90, nodules_Y=10) {
+    write_allModules() {
         let modules_x = '';
         let last_border = '';
-        for (let i = 0; i < nodules_Y; i++) {
-            if (i == nodules_Y-1) {last_border = `style="border-bottom: 1px solid #33312c80;"`;}
-            modules_x += this.write_column(numModules, sizeLimiter, last_border)
+        for (let i = 0; i < this.nodules_Y; i++) {
+            if (i == this.nodules_Y-1) {last_border = `style="border-bottom: 1px solid #33312c80;"`;}
+            modules_x += this.write_column(last_border)
         }
         document.getElementById('div_cont').innerHTML += modules_x;
-        // this.html_contMoules.innerHTML += modules_x
     }
 
-    write_column(numModules, sizeLimiter, last_border) {
-
+    write_column(last_border) {
         var html_aside = `<aside ${last_border}>`;
 
-        var width = screen_modules_size_X(numModules, sizeLimiter);
-        
-        document.getElementById('contBody').style.width = (width*numModules)+'px';
-
-        for (let i = 1; i <= numModules; i++) {
-            html_aside = html_aside+`<div class="module_box" style="width: calc(${width}px - 1px); height: ${width}px;">
+        for (let i = 1; i <= this.numModules; i++) {
+            html_aside = html_aside+`<div class="module_box" style="width: calc(${this.width}px - 1px); height: ${this.width}px;">
                 <div class="atom_modulesPoint">
                     <span>
                         <div><section></section></div>
@@ -46,29 +43,40 @@ class MyModules {
                     </span>
                 </div>
             </div>`;
-            var thehtmla = i == numModules ? html_aside+"</aside>" : '';
+            var thehtmla = i == this.numModules ? html_aside+"</aside>" : '';
         }
         return thehtmla;
     }
+
+    responsive_properties() {
+        document.getElementById('contBody').style.width = (this.width*this.numModules)+'px';
+        document.getElementById('id_navbar').style.height = this.width+'px';
+        if (mediaResponsive()[1].matches) {
+            document.getElementById('lobbyCont').style.width = `100%`;
+
+        } else {
+            document.getElementById('lobbyCont').style.width = `calc(100% - ${this.width*2}px)`;
+        }
+    }
 }
-let instance = new MyModules();
 
 function applyResponsiveStyles() {
+    if (mediaResponsive()[0].matches) {
+        new MyModules(21, 90, 10);
+    } else if (mediaResponsive()[1].matches) {
+        new MyModules(7, 90, 17);
+    } else {
+        new MyModules(21, 100, 10);
+    }
+}
+
+function mediaResponsive() {
     const tabletSize = window.matchMedia("(max-width: 900px) and (min-width: 601px)");
     const mobileSize = window.matchMedia("(max-width: 600px)");
-    console.log('tabletSize', tabletSize);
-    console.log('mobileSize', mobileSize);
-    if (tabletSize.matches) {
-        instance.write_allModules(21, 90, 10);
-    } else if (mobileSize.matches) {
-        instance.write_allModules(7, 90, 17);
-    } else {
-        instance.write_allModules(21, 100, 10);
-    }
+    return [tabletSize, mobileSize]
 }
 applyResponsiveStyles();
 
 window.onresize = function(event) {
     applyResponsiveStyles();
-
 };
