@@ -28,8 +28,22 @@ body {
     background: #555;
 }
 
+@font-face {
+    font-family: 'code_latin';
+    src: url('/static/fonts/MPLUSCodeLatin-Medium.ttf') format('truetype')
+}
+
 :root {
+    /* COLORES */
     --color_base_1: #E0DDCC;
+    --color_base_2: #302d28;
+
+    --color-general_3: #F4C42A;
+    --color-general_4: #302D28;
+    --color-general_4_opacity: #302d2855;
+
+    /* FUENTES */
+    --font-code_latin: 'code_latin';
 }
 
 .style_glass{

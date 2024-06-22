@@ -58,7 +58,7 @@
 }
 
 .organism_lobbyCont {
-    background: green;
+    /* background: green; */
     margin: auto;
     flex-grow: 1;
     display: flex;
@@ -67,39 +67,100 @@
     & main {
         width: 100%;
         height: calc(100% - 50px);
-        background: pink;
+        /* background: pink; */
         display: flex;
 
         .column {
             width: 50px;
             height: 100%;
-            background: firebrick;
+            display: flex;
+            /* background: firebrick; */
+
+            @media (max-width: 1050px) {
+                & {
+                    display: none;
+                }
+            }
+
+            .barra {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+
+                .barraComplement {
+                    width: 100%;
+                    flex-grow: 1;
+                    background: var(--color_base_2);
+                }
+            }
+            & icon-column {
+                width: 50px;
+                margin: auto 0 0 0;
+            }
+            .light {
+                width: 50%;
+                height: 100%;
+                background-image: url('/static/img/line_big.png'); /* reemplaza 'ruta/a/la/imagen.jpg' con la ruta de tu imagen */
+                background-repeat: repeat-y;
+                background-size: 100% 100%;
+            }
         }
         .lobby {
             width: calc(100% - 100px);
             height: 100%;
-            background: yellow;
+            /* background: yellow; */
+            @media (max-width: 1050px) {
+                & {
+                    width: 100%;
+                }
+            }
 
             .center {
                 width: 100%;
-                height: calc(100% - 100px);
-                background: blueviolet;
+                height: calc(100% - 75px);
+                /* background: blueviolet; */
+                display: flex;
             }
             .reproductor {
                 width: 100%;
                 height: 50px;
-                background: darkorange;
+                /* background: darkorange; */
             }
             .line {
-                width: 100%;
-                height: 50px;
-                background: darkred;
+                height: 25px;
+                width: calc(100% + 20px);
+                background-image: url('/static/img/line_big2.png'); /* reemplaza 'ruta/a/la/imagen.jpg' con la ruta de tu imagen */
+                background-repeat: repeat-x;
+                background-size: 100% 100%;
+                position: relative;
+                left: -20px;
             }
         }
     }
     & footer {
         height: 50px;
         width: 100%;
-        background: blue;
+        /* background: blue; */
+        display: flex;
+        justify-content: space-between;
+
+        .footComplement {
+            background: var(--color_base_2);
+            flex-grow: 1;
+            height: 100%;
+            width: 10px; */
+        }
+
+        /* & icon-footer {
+            @media (max-width: 1050px) {
+                & {
+                    border-left: 7px solid var(--color_base_2);
+                    border-right: 7px solid var(--color_base_2);
+                }
+            }
+        } */
+
+       
     }
 }
