@@ -264,24 +264,98 @@
         transform: rotate(360deg);
     }
 }
+@keyframes animated_circle_2 {
+    0% {
+        transform: rotate(360deg);
+    }100%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes animated_circle_3 {
+    0% {
+        transform: rotate(0deg);
+    }30%{
+        transform: rotate(40deg);
+    }60%{
+        transform: rotate(-40deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
 
 .molecule_boxCircle {
     width: 300%;
     height: 300%;
-    background:red;
+    display: flex;
     position: relative;
-
+    z-index: 10;
     
-    .circle_2 {
-        background: green;
+
+    .graphic {
         display: flex;
         width: 100%;
-        & svg {
-            position: absolute;
-            animation-duration: 5s;
-            animation-iteration-count: infinite;
-            animation-fill-mode: forwards;
-            animation-name: animated_circle_1;
-        }
+        position: absolute;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        border-radius: 50%;
+    }
+    
+    /* & svg {
+    } */
+    .circle_1 {
+        animation-duration: 5s;
+        animation-name: animated_circle_2;
+    }
+    .circle_2 {
+        animation-duration: 5s;
+        animation-name: animated_circle_1;
+    }
+    .circle_4 {
+        animation-duration: 10s;
+        animation-name: animated_circle_1;
+        /* background: red; */
+    }
+    .circle_6 {
+        animation-duration: 10s;
+        animation-name: animated_circle_2;
+        /* background: red; */
+    }
+    .circle_7 {
+        animation-duration: 10s;
+        animation-name: animated_circle_3;
+        /* background: red;
+        &:hover {
+            opacity: 0;
+        } */
+    }
+    .circle_8 {
+        animation-duration: 5s;
+        animation-name: animated_circle_2;
+        /* background: red; */
+    }
+    .circle_9 {
+        animation-duration: 5s;
+        animation-name: animated_circle_2;
+        /* background: red; */
+    }
+    .circle_10 {
+        animation-duration: 15s;
+        animation-name: animated_circle_1;
+        /* background: red;
+        cursor: pointer;
+        &:hover {
+            opacity: 0;
+        } */
+    }
+    .circle_11 {
+        animation-duration: 15s;
+        animation-name: animated_circle_2;
+        /* background: red; */
+        cursor: pointer;
+        /* &:hover {
+            opacity: 0;
+        } */
     }
 }
