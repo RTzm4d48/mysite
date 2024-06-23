@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     background: var(--color_base_1);
-    position: relative; /*importante*/
+    position: relative;
 
     padding: 0px;
     margin: auto;
@@ -14,32 +14,32 @@
     & aside {
         background: var(--color_base_1);
         display: flex;
-        border-right: none; /* Elimina el borde en el lado derecho */
+        border-right: none;
         border-bottom: none;
         border-right: 1px solid #33312c80;
         margin: 0px auto;
 
         .module_box {
             border: 1px solid #33312c80;
-            border-right: none; /* Elimina el borde en el lado derecho */
+            border-right: none;
             border-bottom: none;
-            position: relative; /*importante*/
+            position: relative;
 
+            /* NOTE : AQUI ESTA EL TEXTO Y LOS ELEMENTOS ANIMADOS QUE AGREGAMOS A CADA MODULO */
             & nav {
-                /* color: red; */
-                position: absolute;/*importante*/
+                color: var(--color_base_2);
+                position: absolute;
                 margin: auto;
                 /* background: yellow; */
-                /* width: 200%;
-                height: 100%; */
                 display: flex;
                 z-index: 4;
 
                 & p {
-                    margin: auto;
+                    margin: 0 10px auto 10px;
                     font-family: var(--font-code_latin);
                     font-weight: bold;
                     font-size: small;
+                    white-space: pre-line;
                 }
             }
         }

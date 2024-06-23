@@ -140,13 +140,15 @@
     }
 }
 
-.molecule_BoxAnimateLA {
+.molecule_BoxAnimate {
     background: none;
     color: black;
     width: 200%;
     height: 200%;
     display:flex;
     flex-direction:column;
+    transform: rotate(180deg);
+
     
     & .item_x:nth-child(1) {
         animation-delay: 0.1s; /* El primer .item_x comienza la animación después de 1 segundo */
@@ -208,6 +210,78 @@
         }
         &:nth-child(6) {
             animation-delay: 0.6s;
+        }
+    }
+}
+
+@keyframes animated_03 {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }10%{
+        transform: rotate(180deg);
+    }80%{
+        transform: rotate(180deg) scale(1);
+
+    }
+    100% {
+        transform: rotate(180deg) scale(0.8);
+    }
+}
+
+.molecule_boxAnimate_3 {
+    width: 100%;
+
+    & svg {
+        /* background: greenyellow; */
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+        animation-name: animated_03;
+    }
+}
+
+.molecule_boxAnimate_5 {
+    width: 100%;
+    padding: 5px 0;
+    display: flex;
+    justify-content: right;
+
+    
+    & svg {
+        height: 25px;
+        /* background: greenyellow; */
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+        animation-name: animated_03;
+    }
+}
+
+@keyframes animated_circle_1 {
+    0% {
+        transform: rotate(0deg);
+    }100%{
+        transform: rotate(360deg);
+    }
+}
+
+.molecule_boxCircle {
+    width: 300%;
+    height: 300%;
+    background:red;
+    position: relative;
+
+    
+    .circle_2 {
+        background: green;
+        display: flex;
+        width: 100%;
+        & svg {
+            position: absolute;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            animation-name: animated_circle_1;
         }
     }
 }
