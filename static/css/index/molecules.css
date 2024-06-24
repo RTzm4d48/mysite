@@ -302,6 +302,40 @@
         border-radius: 50%;
     }
     
+    .hidden{
+        display: flex;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .options {
+        /* background: red; */
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+
+        & .menu {
+            /* background: greenyellow; */
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            
+            & a {
+                font-size: 25px;
+                margin: 10px auto;
+                font-family: var(--font-code_latin);
+
+                &:hover {
+                    transform: scale(1.1);
+                    font-weight: bold;
+                }
+            }
+        }
+    }
     /* & svg {
     } */
     .circle_1 {
@@ -315,47 +349,29 @@
     .circle_4 {
         animation-duration: 10s;
         animation-name: animated_circle_1;
-        /* background: red; */
     }
     .circle_6 {
         animation-duration: 10s;
         animation-name: animated_circle_2;
-        /* background: red; */
     }
     .circle_7 {
         animation-duration: 10s;
         animation-name: animated_circle_3;
-        /* background: red;
-        &:hover {
-            opacity: 0;
-        } */
     }
     .circle_8 {
         animation-duration: 5s;
         animation-name: animated_circle_2;
-        /* background: red; */
     }
     .circle_9 {
         animation-duration: 5s;
         animation-name: animated_circle_2;
-        /* background: red; */
     }
     .circle_10 {
         animation-duration: 15s;
         animation-name: animated_circle_1;
-        /* background: red;
-        cursor: pointer;
-        &:hover {
-            opacity: 0;
-        } */
     }
     .circle_11 {
         animation-duration: 15s;
         animation-name: animated_circle_2;
-        /* background: red; */
-        cursor: pointer;
-        /* &:hover {
-            opacity: 0;
-        } */
     }
 }
