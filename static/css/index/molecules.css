@@ -142,6 +142,7 @@
 
 .molecule_BoxAnimate {
     background: none;
+    /* background: red; */
     color: black;
     width: 200%;
     height: 200%;

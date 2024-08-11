@@ -35,11 +35,14 @@ body {
 
 :root {
     /* COLORES */
-    --color_base_1: #E0DDCC;
+    /* --color_base_1: #191B1F; */
     --color_base_2: #302d28;
+    /* --color_gradient_1: #21242b; */
+    --color_base_1: #E0DDCC;
+    --color_gradient_1: #e5c989;
 
     --color-general_3: #F4C42A;
-    --color-general_4: #302D28;
+    /* --color-general_4: #302D28; */
     --color-general_4_opacity: #302d2855;
 
     /* FUENTES */

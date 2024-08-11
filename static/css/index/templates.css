@@ -52,7 +52,7 @@
     /* width: 100%; EL WIDTH SE DA CON JS */
     height: 100%;
     flex-grow: 1;
-    background-image: radial-gradient(circle at center, transparent, #e5c989);
+    background-image: radial-gradient(circle at center, transparent, var(--color_gradient_1));
     background-size: 200% 300%;
     background-position: center;
     z-index: 10;
