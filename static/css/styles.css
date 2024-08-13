@@ -1,13 +1,10 @@
 body {
-    /* background: #09da2c; */
-    background: var(--color_base_1);
-    color: white;
+    background: var(--color_background_1);
     width: calc(100vw - 0px);
     height: calc(100vh - 1px);
     padding: 0;
     display: flex;
     overflow: hidden;
-
 }
 
 /* Estilo para la barra de desplazamiento */
@@ -45,7 +42,27 @@ body {
     /* --color-general_4: #302D28; */
     --color-general_4_opacity: #302d2855;
 
-    /* FUENTES */
+
+
+    --color_background_1: #1E222E;
+    --color_background_2: #303951;
+    --color_general_1: #EE8C48;
+    --color_general_1_corder: #502d14;
+    --color_letter_programer: #019986;
+    --color_letter_programer_border: #081e1c;
+    --color_background_border: #a0adbc7e;
+    --color_texto_1: #C4C4C4;
+    --color_artefactos_1: #C4C4C4;
+    --color_exis: #40434B;
+    --color_columnStile: #019986;
+
+
+
+
+
+
+
+    /* NOTE : FUENTES */
     --font-code_latin: 'code_latin';
 }
 
@@ -56,4 +73,8 @@ body {
     border-radius: 20px;
     border:1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 2px 10px 0 #0000002d;
+}
+
+.artefactos_1 {
+    fill: var(--color_artefactos_1);
 }

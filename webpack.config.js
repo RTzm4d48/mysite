@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   entry: {
     // JS
-    components_index: './static/js/script_modules.js',
+    components_index: './static/js/index/main.js',
     responsive_index: './static/js/index_components.js',
     // CSS
     style_reset: './static/css/reset.css',

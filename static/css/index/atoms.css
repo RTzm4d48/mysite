@@ -24,7 +24,9 @@
                 &:after {
                 content: "";
                 position: absolute;
-                background-color: #33312c37;
+                /* background-color: #33312c37;
+                background-color: red; */
+                background-color: var(--color_exis);
                 }
             
                 &:before {

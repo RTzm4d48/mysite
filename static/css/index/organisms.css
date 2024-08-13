@@ -99,7 +99,7 @@
                 .barraComplement {
                     width: 100%;
                     flex-grow: 1;
-                    background: var(--color_base_2);
+                    background: var(--color_columnStile);
                 }
             }
             & icon-column {
@@ -154,7 +154,7 @@
         justify-content: space-between;
 
         .footComplement {
-            background: var(--color_base_2);
+            background: var(--color_columnStile);
             flex-grow: 1;
             height: 100%;
             width: 10px;
