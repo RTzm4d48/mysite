@@ -1,0 +1,12 @@
+.organism_tittle {
+    background: red;
+    height: 50px;
+    /* El width lo aplicamos con js  */
+    display: flex;
+    justify-content: center;
+
+    & section {
+        background: green;
+        display: flex;
+    }
+}

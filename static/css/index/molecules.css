@@ -337,7 +337,7 @@
     }
 
     .central {
-        fill: red;
+        /* fill: red; */
         animation-duration: 2s;
         animation-name: central;
         animation-iteration-count: infinite;
