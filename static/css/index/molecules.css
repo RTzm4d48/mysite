@@ -365,6 +365,7 @@
                 margin: 10px auto;
                 font-family: var(--font-code_latin);
                 color: var(--color_letter_programer);
+                text-decoration: none;
 
                 &:hover {
                     transform: scale(1.1);

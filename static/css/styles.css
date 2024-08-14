@@ -46,6 +46,7 @@ body {
 
     --color_background_1: #1E222E;
     --color_background_2: #303951;
+    --color_background_border: #5C6477;
     --color_general_1: #EE8C48;
     --color_general_1_corder: #502d14;
     --color_letter_programer: #019986;
@@ -55,6 +56,7 @@ body {
     --color_artefactos_1: #C4C4C4;
     --color_exis: #40434B;
     --color_columnStile: #019986;
+    --color_columnStile_opacity: #01998782;
 
 
 
