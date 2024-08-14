@@ -58,6 +58,11 @@ body {
     --color_columnStile: #019986;
     --color_columnStile_opacity: #01998782;
 
+    /* NOTE : TABLE COLOR */
+    --color_table-background: #212633;
+    --color_table-row: #323a4f68;
+    --color_table-border: #5C6477;
+
 
 
 
