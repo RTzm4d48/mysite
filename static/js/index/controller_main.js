@@ -195,7 +195,7 @@ export class BoxAnimates {
             `<div class="hidden graphic circle_9"><svg viewBox="0 0 274 274"><path d="M151.85,48.64a89.74,89.74,0,0,1,74.6,102.67l-5.08-.81A84.59,84.59,0,0,0,151,53.73Z"/></svg></div>`,
             `<div class="graphic circle_10"><svg viewBox="0 0 274 274"><path d="M46.23,64.55a116.48,116.48,0,0,0-24.38,57.82,118.2,118.2,0,0,0-.92,18.14l-7.12.2a125.07,125.07,0,0,1,1-19.25A123.42,123.42,0,0,1,40.66,60.13Z"/></svg></div>`,
             `<div class="hidden graphic circle_11"><svg viewBox="0 0 274 274"><path d="M78.11,70.2A89.4,89.4,0,0,0,52,110.73a90.69,90.69,0,0,0-3.1,13.6l-5.41-.79a95.65,95.65,0,0,1,31-57.43Z"/></svg></div>`,
-            `<div id="circle_hover_options" class="graphic options"><div class="menu"><a href="/templates/networking.html">Networking</a><a href="/templates/porfolio.html">Porfolio</a><a href="/templates/research.html">Research</a></div></div>`
+            `<div id="circle_hover_options" class="graphic options"><div class="menu"><a href="/templates/networking.html">Networking</a><a href="/templates/porfolio.html">Porfolio</a><a href="/templates/blog.html">Blog</a></div></div>`
         ]
         return svg_htmls[num];
     }
