@@ -43,12 +43,17 @@ function dataSkills() {
         { name: `<div class="skill_p selec"><div class="despl"><img src="/static/img/porfolio/icon_02.png" alt=""></div>Python</div>`, value: `Higt`, projects: 12 },
         { name: `<div class="skill_p selec"><div class="despl"><img src="/static/img/porfolio/icon_02.png" alt=""></div>Python</div>`, value: `Higt`, projects: 12 },
         { name: `<div class="skill_p selec"><div class="despl"><img src="/static/img/porfolio/icon_02.png" alt=""></div>Python</div>`, value: `Higt`, projects: 12 },
+        { name: `<div class="skill_p selec"><div class="despl"><img src="/static/img/porfolio/icon_02.png" alt=""></div>Python</div>`, value: `Higt`, projects: 12 },
+        { name: `<div class="skill_p selec"><div class="despl"><img src="/static/img/porfolio/icon_02.png" alt=""></div>Python</div>`, value: `Higt`, projects: 12 },
+        { name: `<div class="skill_p selec"><div class="despl"><img src="/static/img/porfolio/icon_02.png" alt=""></div>Python</div>`, value: `Higt`, projects: 12 },
+        { name: `<div class="skill_p selec"><div class="despl"><img src="/static/img/porfolio/icon_02.png" alt=""></div>Python</div>`, value: `Higt`, projects: 12 },
+        { name: `<div class="skill_p selec"><div class="despl"><img src="/static/img/porfolio/icon_02.png" alt=""></div>Python</div>`, value: `Higt`, projects: 12 },
     ];
 
     return skills;
 }
 
-// createTable();
+createTable();
 function createTable() {
     let table = document.getElementById('bodyTable');
     let skills = dataSkills();

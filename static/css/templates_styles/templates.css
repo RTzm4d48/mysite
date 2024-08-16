@@ -1,5 +1,22 @@
 .templates_boduContSec {
     /* background: red; */
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
+
+}
+
+.template_contBody2 {
+    position: absolute;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* width: 100%; EL WIDTH SE DA CON JS */
+    height: 100vh;
+    flex-grow: 1;
+    background-image: radial-gradient(circle at center, transparent, var(--color_background_2));
+    background-size: 200% 300%;
+    background-position: center;
+    z-index: 10;
+    top: 0;
+    /* background: salmon; */
+    overflow-y: scroll;
 }
