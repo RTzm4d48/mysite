@@ -1,5 +1,5 @@
 import { MyModules, BoxAnimates } from '/static/js/index/controller_main.js';
-import { mediaResponsive, obtenerValorCookie } from '/static/js/utils.js';
+import { mediaResponsive } from '/static/js/utils.js';
 
 function applyResponsiveStyles() {
     if (mediaResponsive()[0].matches) {
@@ -13,8 +13,10 @@ function applyResponsiveStyles() {
 
 applyResponsiveStyles();
 
-window.onresize = function(event) {
-    applyResponsiveStyles();
-};
+// window.onresize = function(event) {
+//     applyResponsiveStyles();
+// };
+
+window.addEventListener('resize', applyResponsiveStyles);
 
 new BoxAnimates();
