@@ -39,7 +39,7 @@ function createTable() {
 
         cell1.innerHTML = skills[i].name;
         cell2.innerHTML = skills[i].value;
-        cell3.innerHTML = `<div class="skill_p"><div class="projec"><img src="/static/img/porfolio/icon_03.png" alt=""></div>${skills[i].projects}</div>`;
+        cell3.innerHTML = `<div class="skill_p"><div class="projec"><img src="../static/img/porfolio/icon_03.png" alt=""></div>${skills[i].projects}</div>`;
     }
     captureEvent();
 }
@@ -56,11 +56,11 @@ function captureEvent() {
             const elementos = document.querySelectorAll('.row_hijo_'+value_id);
             if (elemento) {
                 elementos.forEach(elemento => {
-                    despl.innerHTML = '<img style="transform: rotate(0deg);" src="/static/img/porfolio/icon_02.png" alt="">';
+                    despl.innerHTML = '<img style="transform: rotate(0deg);" src="../static/img/porfolio/icon_02.png" alt="">';
                     elemento.remove();
                 });
             }else {
-                despl.innerHTML = '<img style="transform: rotate(90deg);" src="/static/img/porfolio/icon_02.png" alt="">';
+                despl.innerHTML = '<img style="transform: rotate(90deg);" src="../static/img/porfolio/icon_02.png" alt="">';
                 insert_new_rows(value_id);
             }
         });
@@ -78,7 +78,7 @@ function insert_new_rows(id_row) {
 
         cell1.innerHTML = `<div class="skill_h selec"><div class="hijo"></div>${subSkills[i].name}</div>`;
         cell2.innerHTML = subSkills[i].value;
-        cell3.innerHTML = `<div class="skill_p"><div class="projec"><img src="/static/img/porfolio/icon_03.png" alt=""></div>${subSkills[i].projects}</div>`;
+        cell3.innerHTML = `<div class="skill_p"><div class="projec"><img src="../static/img/porfolio/icon_03.png" alt=""></div>${subSkills[i].projects}</div>`;
     
         document.getElementById('row_'+id_row).insertAdjacentElement("afterend", row);    
     }

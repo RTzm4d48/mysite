@@ -19,28 +19,52 @@ export class MyModules {
             modules_x += this.write_column(last_border, i)
         }
         document.getElementById('div_cont').innerHTML += modules_x;
+        const animate = new BoxAnimates();
+
+        if (this.page == 'index') {
+            if(this.numModules == 7) {
+                animate.pinter_circle();
+                animate.animation_escritura();
+            }else {
+                animate.animations();
+                animate.animation_escritura();
+                animate.pinter_svgs();
+                animate.pinter_circle();
+            }
+        }else {
+
+        }
     }
     insert_inModule(y_i) {
-        const html_incorpored = [
-            {'row_track': '2_3', 'html': `<nav class="text_code" style="width: 300%"><p>2018</p><p>Beginning of this
-                spectacular race</p></nav>`},
-            {'row_track': '3_3', 'html': `<nav class="text_code" style="width: 300%"><p>2023</p><p>This website has been
-                create</p></nav>`},
-            {'row_track': '5_3', 'html': `<nav class="text_code" style="width: 300%;"><p>2024</p><p>Currently programing
-                and developing full
-                backend</p></nav>`},
-            {'row_track': '1_15', 'html': `<nav class="text_code" style="width: 200%"><p>RTzm4d48;</p></nav>`},
-            {'row_track': '7_5', 'html': `<nav class="text_code" style="width: 200%"><p>ID 009.3-3</p></nav>`},
-            {'row_track': '6_18', 'html': `<nav id="boxAnimate" class="molecule_BoxAnimate"></nav>`},
-            {'row_track': '4_17', 'html': `<nav class="text_code" style="width: 500%;"><p id="boxAnimate_2"></p></nav>`},
-            {'row_track': '1_7', 'html': `<nav id="boxAnimate_3" class="molecule_boxAnimate_3"></nav>`},
-            {'row_track': '2_13', 'html': `<nav id="boxAnimate_4" style="width: 100%;padding: 0 10px;"></nav>`},
-            {'row_track': '7_9', 'html': `<nav id="boxAnimate_5" class="molecule_boxAnimate_5"><p>XD</p></nav>`},
-            {'row_track': '1_17', 'html': `<nav id="boxCircle" class="molecule_boxCircle"></nav>`},
-        ]
+        this.html_incorpored = [];
+        if(this.numModules == 7) {
+            this.html_incorpored = [
+                {'row_track': '5_2', 'html': `<nav class="text_code" style="width: 500%;"><p id="boxAnimate_2"></p></nav>`},
+                {'row_track': '2_3', 'html': `<nav id="boxCircle" class="molecule_boxCircle"></nav>`},
+            ]
+        }else {
+            this.html_incorpored = [
+                {'row_track': '2_3', 'html': `<nav class="text_code" style="width: 300%"><p>2018</p><p>Beginning of this
+                    spectacular race</p></nav>`},
+                {'row_track': '3_3', 'html': `<nav class="text_code" style="width: 300%"><p>2023</p><p>This website has been
+                    create</p></nav>`},
+                {'row_track': '5_3', 'html': `<nav class="text_code" style="width: 300%;"><p>2024</p><p>Currently programing
+                    and developing full
+                    backend</p></nav>`},
+                {'row_track': '1_14', 'html': `<nav class="text_code" style="width: 200%"><p>RTzm4d488;</p></nav>`},
+                {'row_track': '7_5', 'html': `<nav class="text_code" style="width: 200%"><p>ID 009.3-3</p></nav>`},
+                {'row_track': '6_18', 'html': `<nav id="boxAnimate" class="molecule_BoxAnimate"></nav>`},
+                {'row_track': '4_17', 'html': `<nav class="text_code" style="width: 500%;"><p id="boxAnimate_2"></p></nav>`},
+                {'row_track': '1_7', 'html': `<nav id="boxAnimate_3" class="molecule_boxAnimate_3"></nav>`},
+                {'row_track': '2_13', 'html': `<nav id="boxAnimate_4" style="width: 100%;padding: 0 10px;"></nav>`},
+                {'row_track': '7_9', 'html': `<nav id="boxAnimate_5" class="molecule_boxAnimate_5"><p>XD</p></nav>`},
+                {'row_track': '1_17', 'html': `<nav id="boxCircle" class="molecule_boxCircle"></nav>`},
+            ]
+        }
+
         if(this.page == 'index') {
-            if(html_incorpored.find(x => x.row_track === y_i)) {
-                return html_incorpored.find(x => x.row_track === y_i).html;
+            if(this.html_incorpored.find(x => x.row_track === y_i)) {
+                return this.html_incorpored.find(x => x.row_track === y_i).html;
             } else {
                 return '';
             }
@@ -93,10 +117,10 @@ export class MyModules {
 
 export class BoxAnimates {
     constructor() {
-        this.animations();
-        this.animation_escritura();
-        this.pinter_svgs();
-        this.pinter_circle();
+        // this.animations();
+        // this.animation_escritura();
+        // this.pinter_svgs();
+        // this.pinter_circle();
     }
 
     animations() {
@@ -106,7 +130,7 @@ export class BoxAnimates {
             let html_exis = '';
             html_exis += `<div class="item_x">`;
             for (let j = 0; j < total; j++) {
-                html_exis = html_exis+`<div class="item_y"><img src="/static/img/icon_f_x.png" alt=""></div>`;
+                html_exis = html_exis+`<div class="item_y"><img src="static/img/icon_f_x.png" alt=""></div>`;
                 let html_exis2 = j == total-1 ? html_exis+"</div>" : '';
                 boxAnimate.innerHTML += html_exis2;
             }
@@ -170,13 +194,18 @@ export class BoxAnimates {
             for (let i = 0; i < 6; i++) {
                 document.getElementsByClassName('hidden')[i].style.opacity = '0';
                 document.getElementById('circle_hover_options').style.opacity = '1';
+                setTimeout(function() {
+                     document.getElementById('circle_hover_options').innerHTML = `<div id="the_menu" class="menu"><a href="templates/networking.html">Networking</a><a href="templates/porfolio.html">Porfolio</a><a href="templates/blog.html">Blog</a></div>`;
+
+                    // document.getElementById('the_menu')[i].style.display = 'flex';
+                }, 200);
             }
         });
         document.getElementById("circle_hover_options").addEventListener('mouseleave', (event) => {
             for (let i = 0; i < 6; i++) {
                 document.getElementsByClassName('hidden')[i].style.opacity = '1';
                 document.getElementById('circle_hover_options').style.opacity = '0';
-
+                document.getElementById('circle_hover_options').innerHTML = ``;
             }
 
         });
@@ -195,7 +224,7 @@ export class BoxAnimates {
             `<div class="hidden graphic circle_9"><svg viewBox="0 0 274 274"><path d="M151.85,48.64a89.74,89.74,0,0,1,74.6,102.67l-5.08-.81A84.59,84.59,0,0,0,151,53.73Z"/></svg></div>`,
             `<div class="graphic circle_10"><svg viewBox="0 0 274 274"><path d="M46.23,64.55a116.48,116.48,0,0,0-24.38,57.82,118.2,118.2,0,0,0-.92,18.14l-7.12.2a125.07,125.07,0,0,1,1-19.25A123.42,123.42,0,0,1,40.66,60.13Z"/></svg></div>`,
             `<div class="hidden graphic circle_11"><svg viewBox="0 0 274 274"><path d="M78.11,70.2A89.4,89.4,0,0,0,52,110.73a90.69,90.69,0,0,0-3.1,13.6l-5.41-.79a95.65,95.65,0,0,1,31-57.43Z"/></svg></div>`,
-            `<div id="circle_hover_options" class="graphic options"><div class="menu"><a href="/templates/networking.html">Networking</a><a href="/templates/porfolio.html">Porfolio</a><a href="/templates/blog.html">Blog</a></div></div>`
+            `<div id="circle_hover_options" class="graphic options"></div>`
         ]
         return svg_htmls[num];
     }

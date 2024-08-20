@@ -5,18 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../static/img/favicon.ico">
     <title>Jeiro-site</title>
-    <link rel="stylesheet" href="/static/css/reset.css">
+    <!-- <link rel="stylesheet" href="/static/css/reset.css">
     <link rel="stylesheet" href="/static/css/styles.css">
     <link rel="stylesheet" href="/static/css/index/atoms.css">
     <link rel="stylesheet" href="/static/css/index/molecules.css">
     <link rel="stylesheet" href="/static/css/index/organisms.css">
-    <link rel="stylesheet" href="/static/css/index/templates.css">
+    <link rel="stylesheet" href="/static/css/index/templates.css"> -->
+    <!-- NOTE : PRODUCCTION -->
+    <script src="../dist/style_reset.js"></script>
+    <script src="../dist/style_styles.js"></script>
+    <script src="../dist/styles_atoms.js"></script>
+    <script src="../dist/styles_molecules.js"></script>
+    <script src="../dist/styles_organisms.js"></script>
+    <script src="../dist/styles_templates.js"></script>
 
     <!-- NOTE : STYLES TEMPLATES -->
-    <link rel="stylesheet" href="/static/css/templates_styles/atoms.css">
+    <!-- <link rel="stylesheet" href="/static/css/templates_styles/atoms.css">
     <link rel="stylesheet" href="/static/css/templates_styles/molecules.css">
     <link rel="stylesheet" href="/static/css/templates_styles/organisms.css">
-    <link rel="stylesheet" href="/static/css/templates_styles/templates.css">
+    <link rel="stylesheet" href="/static/css/templates_styles/templates.css"> -->
+    <!-- NOTE : PRODUCCTION -->
+    <script src="../dist/styles_templates_atoms.js"></script>
+    <script src="../dist/styles_templates_molecules.js"></script>
+    <script src="../dist/styles_templates_organisms.js"></script>
+    <script src="../dist/styles_templates_templates.js"></script>
 </head>
 <body>
     <div class="template_contModules">
@@ -25,7 +37,7 @@
                 <!-- TODO: NAVBAR -->
                 <div id="id_navbar" class="organism_navbar templateNavbar">
                     <nav>
-                        <a href="/">
+                        <a href="../index.html">
                             <div class="mylog">
                                 <icon-mylogo item_size="100%"></icon-mylogo>
                             </div>
@@ -33,9 +45,9 @@
                     </nav>
                     <nav>
                         <ul class="style_glass">
-                            <a href="https://www.linkedin.com/in/jeiro-s%C3%A1nchez-4a138b2a8/" target="_blank"><img src="/static/img/rds_01.png" alt=""></a>
-                            <a href="https://github.com/rtzm4d48" target="_blank"><img src="/static/img/rds_02.png" alt=""></a>
-                            <a href="https://x.com/jeiro_sanchez" target="_blank"><img src="/static/img/rds_03.png" alt=""></a>
+                            <a href="https://www.linkedin.com/in/jeiro-s%C3%A1nchez-4a138b2a8/" target="_blank"><img src="../static/img/rds_01.png" alt=""></a>
+                            <a href="https://github.com/rtzm4d48" target="_blank"><img src="../static/img/rds_02.png" alt=""></a>
+                            <a href="https://x.com/jeiro_sanchez" target="_blank"><img src="../static/img/rds_04.png" alt=""></a>
                         </ul>
                     </nav>
                 </div>
@@ -45,7 +57,7 @@
                         <div class="organism_tittle" id="tittleTempalte">
                             <section>
                                 <span>
-                                    <img src="/static/img/porfolio/porfolio_icon.png" alt="">
+                                    <img src="../static/img/porfolio/porfolio_icon.png" alt="">
                                 </span>
                                 <h1>Porfolio</h1>
                             </section>
@@ -55,7 +67,7 @@
                             <section id="contCuerpo" style="flex-direction: column; background-image: none;">
                                 <div class="contTable">
                                     <span>
-                                        <img src="/static/img/porfolio/icon_01.png" alt="">
+                                        <img src="../static/img/porfolio/icon_01.png" alt="">
                                         <p>My Skills</p>
                                     </span>
                                     <div class="secontContTalbel">
@@ -81,47 +93,48 @@
 
                                 <div class="contTable tableProjects">
                                     <span>
-                                        <img src="/static/img/porfolio/icon_05.png" alt="">
+                                        <img src="../static/img/porfolio/icon_05.png" alt="">
                                         <p>Projects in which I participated</p>
                                     </span>
                                     <!-- NOTE STACK PROJECTS -->
                                     <div class="organism_contProjects">
                                         <article>
                                             <div class="inf_main">
-                                                <img src="/static/img/projects_img/img_01.png" alt="">
-                                                <p>Ke pasa aqui</p>
+                                                <img src="../static/img/projects_img/img_01.png" alt="">
+                                                <p>Desarrollo del sitio web principal de BlaxStax</p>
                                             </div>
                                             <hr>
                                             <div class="more_information">
                                                 <p>More Information</p>
-                                                <img src="/static/img/porfolio/img_06.png" alt="">
+                                                <img src="../static/img/porfolio/img_06.png" alt="">
                                             </div>
                                         </article>
                                         <article>
                                             <div class="inf_main">
-                                                <img src="/static/img/projects_img/img_02.png" alt="">
-                                                <p>Ke pasa aqui</p>
+                                                <img src="../static/img/projects_img/img_02.png" alt="">
+                                                <p>Formulario del proceso de la ruta de tramites para los alumnos.</p>
                                             </div>
                                             <hr>
                                             <div class="more_information">
                                                 <p>More Information</p>
-                                                <img src="/static/img/porfolio/img_06.png" alt="">
+                                                <img src="../static/img/porfolio/img_06.png" alt="">
                                             </div>
                                         </article>
                                         <article>
                                             <div class="inf_main">
-                                                <img src="/static/img/projects_img/img_03.png" alt="">
-                                                <p>Ke pasa aqui</p>
+                                                <img src="../static/img/projects_img/img_03.png" alt="">
+                                                <p>Pagina web para la administración de los proyectos de arqueologia</p>
+
                                             </div>
                                             <hr>
                                             <div class="more_information">
                                                 <p>More Information</p>
-                                                <img src="/static/img/porfolio/img_06.png" alt="">
+                                                <img src="../static/img/porfolio/img_06.png" alt="">
                                             </div>
                                         </article>
                                     </div>
                                     <!-- NOTE STACK PROJECTS -->
-                                    <div class="organism_contProjects">
+                                    <!-- <div class="organism_contProjects">
                                         <article>
                                             <div class="inf_main">
                                                 <img src="/static/img/projects_img/img_01.png" alt="">
@@ -155,7 +168,7 @@
                                                 <img src="/static/img/porfolio/img_06.png" alt="">
                                             </div>
                                         </article>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </section>
                          </div>
@@ -165,6 +178,8 @@
         </div>
     </div>
 </body>
-<script type="module" src="/static/js/templates_scripts/main.js"></script>
-<script type="module" src="../static/js/index_components.js"></script>
+<!-- <script type="module" src="../static/js/index_components.js"></script>
+<script type="module" src="/static/js/templates_scripts/main.js"></script> -->
+<script src="../dist/index_components.js"></script>
+<script src="../dist/templates_main.js"></script>
 </html>

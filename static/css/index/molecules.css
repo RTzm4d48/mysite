@@ -359,6 +359,7 @@
             flex-direction: column;
             /* justify-content: center; */
             align-items: center;
+            /* display: none; */
             
             & a {
                 font-size: 25px;
@@ -370,6 +371,14 @@
                 &:hover {
                     transform: scale(1.1);
                     font-weight: bold;
+                }
+                @media (max-width: 1050px) {
+                    font-size: 25px;
+                }
+                
+                /* MOVIL SIZE */
+                @media (max-width: 580px) {
+                    font-size: 15px;
                 }
             }
         }
